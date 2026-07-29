@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- Paste the dashboard-container here -->
+
+
+<div class="dashboard-container">
+<header class="dashboard-header">
+
+        <h1>Sleep States</h1>
+
+        <p>Interactive Multi Device Sleep Monitoring System</p>
+
+    </header>
+
+    <div class="dashboard-grid">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-column">
+
+    <!-- Hardware -->
+    <div class="dashboard-card">
+
+        <h3>Hardware Source</h3>
+
+        <div class="device-selector-wrapper">
+
+            <button id="phoneBtn" class="selector-btn active">
+                📱 Phone
+            </button>
+
+            <button id="watchBtn" class="selector-btn">
+                ⌚ Smart Watch
+            </button>
+
+        </div>
+
+        <div class="status-bar">
+            <span>Status</span>
+            <span id="statusPill" class="connected">LOCAL</span>
+        </div>
+
+        <div id="scanArea" style="display:none;">
+
+            <button id="scanBtn" class="primary-btn">
+                Scan Devices
+            </button>
+
+        </div>
+
+        <div id="deviceList" class="device-list" style="display:none;">
+
+            <div class="device">
+                <div>
+                    <strong>Apple Watch Series 9</strong>
+                    <small>Bluetooth Device</small>
+                </div>
+
+                <button class="connectBtn">
+                    Connect
+                </button>
+            </div>
+
+            <div class="device">
+                <div>
+                    <strong>Samsung Galaxy Watch 6</strong>
+                    <small>Bluetooth Device</small>
+                </div>
+
+                <button class="connectBtn">
+                    Connect
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+
+            <!-- Controls -->
+
+            <div class="dashboard-card">
+
+                <h3>Sleep Controls</h3>
+
+                <button
+                    id="startBtn"
+                    class="green-btn">
+
+                    ▶ Start Tracking
+
+                </button>
+
+                <button
+                    id="pauseBtn"
+                    class="blue-btn">
+
+                    ⏸ Pause
+
+                </button>
+
+                <button
+                    id="stopBtn"
+                    class="red-btn"
+                    disabled>
+
+                    ■ Stop
+
+                </button>
+
+                <button
+                    id="resetBtn"
+                    class="gray-btn">
+
+                    ↺ Reset
+
+                </button>
+
+            </div>
+
+            <!-- Sleep Information -->
+
+            <div class="dashboard-card">
+
+                <h3>Sleep Information</h3>
+
+                <div class="info">
+
+                    <span>Sleep Started</span>
+
+                    <strong id="sleepTimeOutput">--:--</strong>
+
+                </div>
+
+                <div class="info">
+
+                    <span>Wake Time</span>
+
+                    <strong id="wakeTimeOutput">--:--</strong>
+
+                </div>
+
+                <div class="info">
+
+                    <span>Total Duration</span>
+
+                    <strong id="durationOutput">0 Hours</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-column">
+
+            <!-- Circle -->
+
+            <div class="dashboard-card">
+
+                <h3>Sleep Score</h3>
+
+                <div class="circle">
+
+                    <div id="centerHoursVal">
+
+                        0h
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="dashboard-card">
+
+                <h3>Statistics</h3>
+
+                <div class="stats-grid">
+
+                    <div class="stat-box">
+
+                        <span>Heart Rate</span>
+
+                        <strong id="heartRate">
+                            72 bpm
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span>Respiration</span>
+
+                        <strong id="respRate">
+                            16 rpm
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span>Deep Sleep</span>
+
+                        <strong id="deepSleep">
+                            0 h
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span>Light Sleep</span>
+
+                        <strong id="lightSleep">
+                            0 h
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span>REM</span>
+
+                        <strong id="remSleep">
+                            0 h
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span>Awake</span>
+
+                        <strong id="awakeSleep">
+                            0 h
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Log -->
+
+            <div class="dashboard-card">
+
+                <h3>Activity Log</h3>
+
+                <div id="logArea">
+
+                    Dashboard Ready...
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
