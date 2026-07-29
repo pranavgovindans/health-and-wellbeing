@@ -325,7 +325,7 @@ function saveProfile() {
 
     alert("Profile Saved Successfully!");
 
-    window.location.href = "health-default.html";
+    window.location.href = "user-selection.html";
 
 }
 window.onload = function(){
@@ -339,7 +339,23 @@ window.onload = function(){
         document.getElementById("sleepInfoScreen").style.display="none";
 
         document.querySelector(".dashboard-container").style.display="block";
-
     }
 
+};
+
+// ============================
+// Adult / Children Selection
+// ============================
+
+function selectUser(type){
+
+    localStorage.setItem("userType", type);
+
+    if(type==="adult"){
+        window.location.href="health-default.html";
+    }else{
+        window.location.href="health-default.html";
+    }
+
+}
 }
