@@ -124,8 +124,8 @@ function simulateStage(){
 
 }
 
+if (startBtn) {
 startBtn.onclick=function(){
-
     clearInterval(timer);
 
     paused=false;
@@ -158,7 +158,9 @@ startBtn.onclick=function(){
     stopBtn.disabled=false;
 
 }
+}
 
+if (pauseBtn) {
 pauseBtn.onclick=function(){
 
     paused=!paused;
@@ -179,57 +181,61 @@ pauseBtn.onclick=function(){
 
     }
 
+};
 }
 
-stopBtn.onclick=function(){
+if (stopBtn) {
+    stopBtn.onclick = function () {
 
-    clearInterval(timer);
+        clearInterval(timer);
 
-    wakeTimeOutput.innerHTML =
-        new Date().toLocaleTimeString();
+        wakeTimeOutput.innerHTML =
+            new Date().toLocaleTimeString();
 
-    log("Tracking Stopped");
+        log("Tracking Stopped");
 
-    startBtn.disabled=false;
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
 
-    stopBtn.disabled=true;
-
+    };
 }
 
-resetBtn.onclick=function(){
+if (resetBtn) {
+    resetBtn.onclick = function () {
 
-    clearInterval(timer);
+        clearInterval(timer);
 
-    seconds=0;
+        seconds = 0;
+        paused = false;
 
-    paused=false;
+        stageHours["Awake"] = 0;
+        stageHours["Light Sleep"] = 0;
+        stageHours["Deep Sleep"] = 0;
+        stageHours["REM Sleep"] = 0;
 
-    stageHours["Awake"]=0;
-    stageHours["Light Sleep"]=0;
-    stageHours["Deep Sleep"]=0;
-    stageHours["REM Sleep"]=0;
+        sleepTimeOutput.innerHTML = "--:--";
+        wakeTimeOutput.innerHTML = "--:--";
+        durationOutput.innerHTML = "0 Hours";
+        centerHoursVal.innerHTML = "0h";
 
-    sleepTimeOutput.innerHTML="--:--";
-    wakeTimeOutput.innerHTML="--:--";
-    durationOutput.innerHTML="0 Hours";
-    centerHoursVal.innerHTML="0h";
+        heartRate.innerHTML = "72 bpm";
+        respRate.innerHTML = "16 rpm";
 
-    heartRate.innerHTML="72 bpm";
-    respRate.innerHTML="16 rpm";
+        awakeSleep.innerHTML = "0 h";
+        lightSleep.innerHTML = "0 h";
+        deepSleep.innerHTML = "0 h";
+        remSleep.innerHTML = "0 h";
 
-    awakeSleep.innerHTML="0 h";
-    lightSleep.innerHTML="0 h";
-    deepSleep.innerHTML="0 h";
-    remSleep.innerHTML="0 h";
+        logArea.innerHTML = "Dashboard Ready...";
 
-    logArea.innerHTML="Dashboard Ready...";
+        pauseBtn.innerHTML = "⏸ Pause";
 
-    pauseBtn.innerHTML="⏸ Pause";
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
 
-    startBtn.disabled=false;
-    stopBtn.disabled=true;
-
+    };
 }
+
 // =============================
 // Phone / Watch Switching
 // =============================
@@ -242,8 +248,8 @@ const deviceList = document.getElementById("deviceList");
 const statusPill = document.getElementById("statusPill");
 const scanBtn = document.getElementById("scanBtn");
 
-phoneBtn.onclick = function () {
-
+if (phoneBtn) {
+    phoneBtn.onclick = function () {
     phoneBtn.classList.add("active");
     watchBtn.classList.remove("active");
 
@@ -254,8 +260,10 @@ phoneBtn.onclick = function () {
     statusPill.className = "connected";
 
 };
+}
 
-watchBtn.onclick = function () {
+if (watchBtn) {
+    watchBtn.onclick = function () {
 
     watchBtn.classList.add("active");
     phoneBtn.classList.remove("active");
@@ -267,12 +275,13 @@ watchBtn.onclick = function () {
     statusPill.className = "disconnected";
 
 };
+}
 
-scanBtn.onclick = function () {
-
-    deviceList.style.display = "block";
-
-};
+if (scanBtn) {
+    scanBtn.onclick = function () {
+        deviceList.style.display = "block";
+    };
+}
 
 document.querySelectorAll(".connectBtn").forEach(function(btn){
 
