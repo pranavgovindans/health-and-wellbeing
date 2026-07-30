@@ -329,10 +329,23 @@ function openDashboard(){
 }
 function saveProfile() {
 
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("gender", document.getElementById("gender").value);
+    localStorage.setItem("dob", document.getElementById("dob").value);
+    localStorage.setItem("height", document.getElementById("height").value);
+    localStorage.setItem("weight", document.getElementById("weight").value);
+    localStorage.setItem("bloodGroup", document.getElementById("bloodGroup").value);
+    localStorage.setItem("country", document.getElementById("country").value);
+    localStorage.setItem("state", document.getElementById("state").value);
+    localStorage.setItem("district", document.getElementById("district").value);
+    localStorage.setItem("emergencyName", document.getElementById("emergencyName").value);
+    localStorage.setItem("emergencyNumber", document.getElementById("emergencyNumber").value);
+    localStorage.setItem("allergies", document.getElementById("allergies").value);
+    localStorage.setItem("medicalConditions", document.getElementById("medicalConditions").value);
+
     alert("Profile Saved Successfully!");
 
     window.location.href = "user-selection.html";
-
 }
 window.onload = function(){
 
