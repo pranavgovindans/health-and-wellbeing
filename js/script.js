@@ -351,6 +351,7 @@ function selectUser(type){
     }else{
         window.location.href="health-default.html";
     }
+}
 
 
 
