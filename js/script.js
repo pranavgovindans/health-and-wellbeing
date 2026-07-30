@@ -352,6 +352,6 @@ function selectUser(type){
         window.location.href="health-default.html";
     }
 }
-alert("THIS IS THE NEW SCRIPT");
+ alert("THIS IS THE NEW SCRIPT");
 } 
 
