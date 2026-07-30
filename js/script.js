@@ -340,12 +340,7 @@ window.onload = function(){
 
         document.querySelector(".dashboard-container").style.display="block";
     }
-
-};
-
-// ============================
-// Adult / Children Selection
-// ============================
+}
 
 function selectUser(type){
 
@@ -358,4 +353,4 @@ function selectUser(type){
     }
 
 }
-}
+
