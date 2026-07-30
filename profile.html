@@ -20,13 +20,13 @@
 
     <div class="form-group">
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name">
+        <input type="text" id="name" placeholder="Enter your full name">
     </div>
 
     <div class="form-group">
         <label>Gender</label>
 
-        <select>
+       <select id="gender">
             <option>Select Gender</option>
             <option>Male</option>
             <option>Female</option>
@@ -36,23 +36,23 @@
 
     <div class="form-group">
         <label>Date of Birth</label>
-        <input type="date">
+        <input type="date" id="dob">
     </div>
 
     <div class="form-group">
         <label>Height (cm)</label>
-        <input type="number">
+        <input type="number" id="height">
     </div>
 
     <div class="form-group">
         <label>Weight (kg)</label>
-        <input type="number">
+       <input type="number" id="weight">
     </div>
 
     <div class="form-group">
         <label>Blood Group</label>
 
-        <select>
+       <select id="bloodGroup">
             <option>Select</option>
             <option>A+</option>
             <option>A-</option>
@@ -67,37 +67,37 @@
 
     <div class="form-group">
         <label>Country</label>
-        <input type="text">
+        <input type="text" id="country">
     </div>
 
     <div class="form-group">
         <label>State</label>
-        <input type="text">
+       <input type="text" id="state">
     </div>
 
     <div class="form-group">
         <label>District</label>
-        <input type="text">
+       <input type="text" id="district">
     </div>
 
     <div class="form-group">
         <label>Emergency Contact Name</label>
-        <input type="text">
+        <input type="text" id="emergencyName">
     </div>
 
     <div class="form-group">
         <label>Emergency Contact Number</label>
-        <input type="tel">
+       <input type="tel" id="emergencyNumber">
     </div>
 
     <div class="form-group">
         <label>Known Allergies</label>
-        <textarea></textarea>
+       <textarea id="allergies"></textarea>
     </div>
 
     <div class="form-group">
         <label>Existing Medical Conditions</label>
-        <textarea></textarea>
+       <textarea id="medicalConditions"></textarea>
     </div>
 
     <button class="primary-btn" onclick="saveProfile()">
