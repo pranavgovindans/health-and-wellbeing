@@ -242,7 +242,8 @@ if (resetBtn) {
 
 const phoneBtn = document.getElementById("phoneBtn");
 const externalBtn = document.getElementById("externalBtn");
-
+console.log("phoneBtn =", phoneBtn);
+console.log("externalBtn =", externalBtn);
 const scanArea = document.getElementById("scanArea");
 const deviceList = document.getElementById("deviceList");
 const statusPill = document.getElementById("statusPill");
