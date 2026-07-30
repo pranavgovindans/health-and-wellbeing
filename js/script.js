@@ -353,6 +353,5 @@ function selectUser(type){
     }
 }
 alert("THIS IS THE NEW SCRIPT");
-}
-
+} 
 
