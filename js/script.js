@@ -241,7 +241,7 @@ if (resetBtn) {
 // =============================
 
 const phoneBtn = document.getElementById("phoneBtn");
-const watchBtn = document.getElementById("watchBtn");
+const externalBtn = document.getElementById("externalBtn");
 
 const scanArea = document.getElementById("scanArea");
 const deviceList = document.getElementById("deviceList");
@@ -262,19 +262,19 @@ if (phoneBtn) {
 };
 }
 
-if (watchBtn) {
-    watchBtn.onclick = function () {
+if (externalBtn) {
+    externalBtn.onclick = function () {
 
-    watchBtn.classList.add("active");
-    phoneBtn.classList.remove("active");
+        externalBtn.classList.add("active");
+        phoneBtn.classList.remove("active");
 
-    scanArea.style.display = "block";
-    deviceList.style.display = "none";
+        scanArea.style.display = "block";
+        deviceList.style.display = "none";
 
-    statusPill.textContent = "OFFLINE";
-    statusPill.className = "disconnected";
+        statusPill.textContent = "OFFLINE";
+        statusPill.className = "disconnected";
 
-};
+    };
 }
 
 if (scanBtn) {
@@ -293,8 +293,7 @@ document.querySelectorAll(".connectBtn").forEach(function(btn){
         scanArea.style.display = "none";
         deviceList.style.display = "none";
 
-        alert("Smart Watch Connected!");
-
+       alert("Device Connected Successfully!");
     };
 
 });
