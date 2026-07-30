@@ -352,5 +352,5 @@ function selectUser(type){
         window.location.href="health-default.html";
     }
 
-}
+
 
