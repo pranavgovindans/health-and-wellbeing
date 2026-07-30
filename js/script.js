@@ -248,23 +248,21 @@ const deviceList = document.getElementById("deviceList");
 const statusPill = document.getElementById("statusPill");
 const scanBtn = document.getElementById("scanBtn");
 
-if (phoneBtn) {
+if (phoneBtn && externalBtn) {
     phoneBtn.onclick = function () {
-    phoneBtn.classList.add("active");
-    watchBtn.classList.remove("active");
+        phoneBtn.classList.add("active");
+        externalBtn.classList.remove("active");
 
-    scanArea.style.display = "none";
-    deviceList.style.display = "none";
+        scanArea.style.display = "none";
+        deviceList.style.display = "none";
 
-    statusPill.textContent = "LOCAL";
-    statusPill.className = "connected";
-
-};
+        statusPill.textContent = "LOCAL";
+        statusPill.className = "connected";
+    };
 }
 
-if (externalBtn) {
+if (externalBtn && phoneBtn) {
     externalBtn.onclick = function () {
-
         externalBtn.classList.add("active");
         phoneBtn.classList.remove("active");
 
@@ -273,7 +271,6 @@ if (externalBtn) {
 
         statusPill.textContent = "OFFLINE";
         statusPill.className = "disconnected";
-
     };
 }
 
